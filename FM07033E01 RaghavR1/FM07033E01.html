@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9,10,11 IE=EDGE"/>
+<meta name="viewport" content="width=device-width">
+<link type="text/css" rel="stylesheet" href="https://www.educosoft.com/sharedSite/HTML5Common/MFExample/RFHC_baseForExample_V2.css">
+<script src="template_files/jquery/jquery.min.js"></script>
+<script src="template_files/jquery/jquery-ui.min.js"></script>
+<script src="template_files/jquery/jquery.ui.touch-punch.min.js"></script>
+<script src="template_files/jquery/calci.js"></script> 
+<script src="template_files/jquery/functionUses.js"></script>
+<script src="content_files/content.js"></script>
+<script src="content_files/app.js"></script> 
+<script src="https://www.educosoft.com/sharedSite/HTML5Common/MFExample/baseForExample_V1.js"></script>
+<script src="template_files/jquery/middleForAll.js"></script>
+<link type="text/css" rel="stylesheet" href="content_files/content.css"> 
+<script src="template_files/jquery/container_height.js"></script>
+<script src="https://www.educosoft.com/sharedSite/HTML5Common/MFExample/ExampleDataSave.js"></script>
+</head>
+<body>
+
+<div class="warning">
+<div class="OrientImage"><img src="image/orientationExample.png" alt="Orientation Change" class="orient"></div>
+</div>
+
+
+<div id='LoadingDiv' style="text-align:center; user-select:none"><img src="image/Loading.gif" style="width:20%"/></div>
+<script>
+ var height = $(window).innerHeight();
+ var LoadingDivHeight = $('#LoadingDiv').height();
+ var finalHeight = (height-LoadingDivHeight)/2;
+  $('#LoadingDiv').css({'margin-top':finalHeight+"px"})
+  ////////////////////////////////////////////////////////////////
+	 $('img').on('dragstart', function(event) { event.preventDefault();});
+  ///////////////////////////////////////////////////////////////
+</script>
+<div class="container-fluid" id='QuesDiv' style="display:none">
+<div class="header">
+<div class="new_h">
+	<div class="section1"> <h3>Objective: <font color='#009'> </font></h3></div> <!-- section1 closed-->
+    <div class="wholeSection">
+	<div class="section2 land">
+    	<input type="button" value="Try Again" class="newSet headerButton" onClick="nextQuesGeneration()">
+        <input type="button" value="Solution" class="solution headerButton" onClick="showSolution()">
+    </div><!-- section2 closed-->
+    
+    <div class="section3">
+    	<div class="questionSection">
+            <div class="question">
+                <span class="">
+                The variety pack from Karen’s Nut Shop contains
+                <div class="fraction bold">
+                <span class="fup"><span class="val1"></span></span>
+                <span class="bar">/</span>
+                <span class="fdn"><span class="val2"></span></span>
+                </div> pounds of almonds,
+                
+                <div class="fraction bold">
+                <span class="fup"><span class="val3"></span></span>
+                <span class="bar">/</span>
+                <span class="fdn"><span class="val4"></span></span>
+                </div> pounds of walnuts,
+                
+                <div class="fraction bold">
+                <span class="fup"><span class="val5"></span></span>
+                <span class="bar">/</span>
+                <span class="fdn"><span class="val6"></span></span>
+                </div> pounds of pecans, and
+                
+                <div class="fraction bold">
+                <span class="fup"><span class="val7"></span></span>
+                <span class="bar">/</span>
+                <span class="fdn"><span class="val8"></span></span>
+                </div> pounds of cashews. How many pounds of nuts does the variety pack contain in all?
+
+                
+                
+
+               
+                </span>
+               
+            </div> <!-- div question-->
+            
+            <div class="inputAndDoneSpace">
+            <table class="InputAndDoneTbl">
+            <tr>
+            <td class="InptDnTd1" style="height:1.7em;" colspan="2"> </td>
+            <td class="InptDnTd2" style="height:1.7em;" colspan="3"> 
+                        <div class="remark no-space" style="width:70%;"><div class="respond bold" style="color:#339966;"><span id="FB_TxtBox"></span></div></div>
+            			<div class="prompt_New blankMessage_New"><b>Enter the value.</b></div>
+                        <div class="prompt_New whatvalue"><b>What <span id="whatValue"></span>?</b></div>
+                		<div class="prompt_New WhatPrompt prompt1"><div class="promptText"><b>Place Comma ( , ) appropriately.</b></div></div>
+            </td>
+            </tr>
+            
+            <tr>
+            <td class="InptDnTd1" style="height:1.7em;" colspan="2"> </td>
+            <td class="InptDnTd2"> <div class="inputDiv"> <input type="text" class="input1 input" id="inputText" style="text-transform:lowercase;" spellcheck="false" tabindex="1" onKeyPress="keyPressed(event)" onFocus="myFocus(this)" autocomplete="off"/> </div> </td>
+        	<td class="InptDnTd3"> <span class="pre">pounds</span> </td>
+            <td class="InptDnTd4"> <div class="doneDiv"> <button class="done1" onClick="doneButton()" tabindex="2">Done</button> </div> </td>
+            </tr>
+            </table>
+            </div>
+                    
+            <div class=" Port flex_x">
+                <div><input type="button" value="Solution" class="solution headerButton" onClick="showSolution()"></div>
+                <div><span style="visibility:hidden;">11.</span></div>
+                <div><input type="button" value="Try Again" class="newSet headerButton" onClick="nextQuesGeneration()"></div> 
+            </div> <!-- Port flex_x closed-->  
+                       
+            <div class="ClickToAnsDiv"> Click here to enter answer </div> 
+        </div>	<!-- questionSection closed-->
+    </div>	<!-- section3 closed-->
+    </div>	<!-- wholeSection closed-->
+</div>	<!-- new_h closed-->
+   
+    <div class="section4 KeypadArea calc">
+    	<div class="KeypadBoundary">
+        	<div class="keypadNote"><b>Use me to enter the answer</b></div>
+            <div class="keypadKeys">
+            
+                    <button class="calc_btn calc_btn_New" value="1">1</button>
+                    <button class="calc_btn calc_btn_New" value="2">2</button>
+                    <button class="calc_btn calc_btn_New" value="3">3</button>
+                    <button class="calc_btn calc_btn_New" value="4">4</button>
+                     
+                    <button class="back ThreeCommonBtns ThreeCommonBtnsNew" value="back">Back</button>
+                    
+                    <button class="calc_btn calc_btn_New" value="5">5</button>
+                    <button class="calc_btn calc_btn_New" value="6">6</button>
+                    <button class="calc_btn calc_btn_New" value="7">7</button>
+                    <button class="calc_btn calc_btn_New" value="8">8</button>
+                    
+                    <button class="delete ThreeCommonBtns ThreeCommonBtnsNew"  value="delete">Delete</button>
+                    
+                    <button class="calc_btn calc_btn_New" value="9">9</button>  
+                    <button class="calc_btn calc_btn_New" value="0">0</button>
+                    <button class="calc_btn subtract vb rel gg1" id="minus" value="–" data-value=" – "><b>–</b></button>
+                    <button class="calc_btn subtract vb rel hidden" id="" value="," data-value=","><b class="Spcom">,</b></button>
+                    <!--<button class="calc_btn calc_btn_New subtract" value="(">(</button>
+                    <button class="calc_btn calc_btn_New subtract" value=")">)</button>
+                    <button class="calc_btn subtract " value="tan⁻¹" data-value="tan⁻¹"><b>tan<sup><small>–1</small></sup></b></button>
+                    <button class="calc_btn subtract inverse hidden" value="tan⁻¹" data-value="tan⁻¹"><b>tan<sup><small>–1</small></sup></b></button>
+                    <button class="calc_btn calc_btn_New subtract hidden" value="(">(</button>
+                    <button class="calc_btn calc_btn_New subtract hidden" value="(">(</button>
+                    <button class="calc_btn calc_btn_New subtract hidden" value="(">(</button>
+                    <button class="calc_btn calc_btn_New subtract inverse" value="sinx" data-value="sinx"><b>sinx</b></button>
+                    <button class="calc_btn calc_btn_New subtract inverse" value="cosx" data-value="cosx"><b>cosx</b></button>
+                    <button class="calc_btn calc_btn_New subtract inverse" value="tanx" data-value="tanx"><b>tanx</b></button>
+                    <button class="calc_btn calc_btn_New subtract inverse" value="sec²x" data-value="sec²x"><b>sec<sup><small>2</small></sup>x</b></button>
+                    <button class="calc_btn calc_btn_New subtract" id="plus" value="+" data-value=" + "><b>+</b></button>
+                    <button class="calc_btn calc_btn_New subtract hidden" id="minus" value="–" data-value=" – "><b>–</b></button>
+                    <button class="calc_btn calc_btn_New subtract hidden" id="slash" value="/" data-value=" / "><b>/</b></button>
+                    -->
+                    <!--<button class="calc_btn calc_btn_New subtract inverse" value="/">/</button>
+                    <button class="calc_btn calc_btn_New subtract hidden" value="/">/</button>-->
+                    <button class="clear ThreeCommonBtns ThreeCommonBtnsNew" value="Clear">Clear</button>
+
+                    <!--<button class="calc_btn calc_btn_New subtract" value="x">x</button>
+                    <button class="calc_btn calc_btn_New subtract" value="x²" data-value="x²"><b>x<sup><small>2</small></sup></b></button>
+                    <button class="calc_btn calc_btn_New  subtract" value="x³" data-value="x³"><b>x<sup><small>3</small></sup></b></button>
+                    <button class="calc_btn calc_btn_New  subtract" value="x⁴" data-value="x⁴"><b>x<sup><small>4</small></sup></b></button>
+                    <button class="calc_btn calc_btn_New  subtract" value="x⁵" data-value="x⁵"><b>x<sup><small>5</small></sup></b></button>
+                    <button class="calc_btn subtract"  value="." data-value="."><b>•</b></button>
+                     <button class="calc_btn tab subtract"><b>Tab &nbsp; &#8644;</b></button>-->
+
+                    <!--
+                    <button class="calc_btn subtract inverse" value="sin⁻¹" data-value="sin⁻¹"><b>sin<sup><small>–1</small></sup></b></button>
+                    <button class="calc_btn subtract inverse" value="cos⁻¹" data-value="sin⁻¹"><b>cos<sup><small>–1</small></sup></b></button>
+                    
+                    <button class="calc_btn subtract" value="x⁶" data-value="x⁶"><b>x<sup><small>6</small></sup></b></button>
+                    <button class="calc_btn subtract" value="x⁷" data-value="x⁷"><b>x<sup><small>7</small></sup></b></button>
+                    <button class="calc_btn subtract" value="x⁸" data-value="x⁸"><b>x<sup><small>8</small></sup></b></button>
+                    <button class="calc_btn subtract" value="x⁹" data-value="x⁹"><b>x<sup><small>9</small></sup></b></button>
+                    <button class="calc_btn subtract" value="x¹⁰" data-value="x¹⁰"><b>x<sup><small>10</small></sup></b></button>
+                    <button class="calc_btn subtract" value="x¹¹" data-value="x¹¹"><b>x<sup><small>11</small></sup></b></button>-->
+
+            </div>	<!-- keypadKeys closed-->
+            
+        </div>	<!-- KeypadBoundary closed-->
+        
+        
+    </div>	<!-- section4 closed-->
+    
+</div>	<!-- header closed-->
+
+<div class="container">
+
+<div class="AreaForKeypadAndInputInDevice calc">
+    
+    <div class="KeypadBoundary KeyPadKeyBoundaryDevice">
+        	<div class="keypadNote keypadNoteDevice"><b>Use me to enter the answer</b></div>
+            <div class="keypadKeys keypadKeysDevice">
+            
+                    <button class="calc_btn KeyPadKeyDevice" value="1">1</button>
+                    <button class="calc_btn KeyPadKeyDevice" value="2">2</button>
+                    <button class="calc_btn KeyPadKeyDevice" value="3">3</button>
+                    <button class="calc_btn KeyPadKeyDevice" value="4">4</button>
+                     
+                    <button class="back ThreeCommonBtns  KeyPadKeyDevice" value="back">Back</button>
+                    <button class="calc_btn KeyPadKeyDevice" value="5">5</button>
+                    <button class="calc_btn KeyPadKeyDevice" value="6">6</button>
+                    <button class="calc_btn KeyPadKeyDevice" value="7">7</button>
+                    <button class="calc_btn KeyPadKeyDevice" value="8">8</button>
+                    
+                    <button class="delete ThreeCommonBtns KeyPadKeyDevice"  value="delete">Delete</button>
+                    
+                    <button class="calc_btn KeyPadKeyDevice" value="9">9</button>  
+                    <button class="calc_btn KeyPadKeyDevice" value="0">0</button>
+                    <button class="calc_btn subtract vb rel gg1 KeyPadKeyDevice" id="minus" value="–" data-value=" – "><b>–</b></button>
+                    <button class="calc_btn subtract KeyPadKeyDevice hidden" id="" value="," data-value=","><b>,</b></button>
+                    
+                    <button class="clear ThreeCommonBtns KeyPadKeyDevice" value="Clear">Clear</button>
+                    <!--<button class="calc_btn KeyPadKeyDevice subtract inverse" value="sin⁻¹" data-value="sin⁻¹"><b>sin<sup><small>–1</small></sup></b></button>
+                    <button class="calc_btn KeyPadKeyDevice subtract inverse" value="cos⁻¹" data-value="sin⁻¹"><b>cos<sup><small>–1</small></sup></b></button>
+                    <button class="calc_btn KeyPadKeyDevice subtract" value="/">/</button>
+                    <button class="calc_btn KeyPadKeyDevice subtract" value="(">(</button>
+                    <button class="calc_btn KeyPadKeyDevice subtract" value=")">)</button>
+                    -->
+
+                    <!--
+                    <button class="calc_btn KeyPadKeyDevice subtract" id="minus" value="–" data-value=" – "><b>–</b></button>
+                    <button class="calc_btn KeyPadKeyDevice subtract" id="slash" value="/" data-value=" / "><b>/</b></button>
+                    <button class="calc_btn KeyPadKeyDevice subtract inverse" value="tan⁻¹" data-value="tan⁻¹"><b>tan<sup><small>–1</small></sup></b></button>
+                    <button class="calc_btn KeyPadKeyDevice subtract inverse" value="sinx" data-value="sinx"><b>sinx</b></button>
+                    <button class="calc_btn KeyPadKeyDevice subtract inverse" value="cosx" data-value="cosx"><b>cosx</b></button>
+                    <button class="calc_btn KeyPadKeyDevice subtract inverse" value="tanx" data-value="tanx"><b>tanx</b></button>
+                    <button class="calc_btn KeyPadKeyDevice subtract inverse" value="sec²x" data-value="sec²x"><b>sec<sup><small>2</small></sup>x</b></button>
+                    <button class="calc_btn KeyPadKeyDevice subtract" id="plus" value="+" data-value=" + "><b>+</b></button>
+                    <button class="calc_btn KeyPadKeyDevice subtract" value="x">x</button>
+                    <button class="calc_btn subtract KeyPadKeyDevice" value="x²" data-value="x²"><b>x<sup><small>2</small></sup></b></button>
+                    <button class="calc_btn subtract KeyPadKeyDevice" value="x³" data-value="x³"><b>x<sup><small>3</small></sup></b></button>
+                    <button class="calc_btn subtract KeyPadKeyDevice" value="x⁴" data-value="x⁴"><b>x<sup><small>4</small></sup></b></button>
+                    <button class="calc_btn subtract KeyPadKeyDevice" value="x⁵" data-value="x⁵"><b>x<sup><small>5</small></sup></b></button>-->
+                    
+                    <!--<button class="calc_btn subtract KeyPadKeyDevice" id="minus" value="–" data-value="– "><b>–</b></button>
+                    <button class="calc_btn subtract KeyPadKeyDevice hidden" value="±"><b>±</b></button>
+                    <button class="calc_btn subtract KeyPadKeyDevice hidden" value="." data-value="."><b>•</b></button>
+                  	 <button class="calc_btn tab subtract ThreeCommonBtns"><b>Tab &nbsp; &#8644;</b></button>
+
+                    <button class="calc_btn subtract KeyPadKeyDevice" value="x⁶" data-value="x⁶"><b>x<sup><small>6</small></sup></b></button>-->
+                    
+            </div>	<!-- keypadKeys closed-->
+            
+        </div>	<!-- KeypadBoundary closed-->
+        
+        <div class="inputAndDoneSpaceFordevice">
+        <table class="InputAndDoneTbl">
+        <tr>
+        <td class="InptDnTd1" style="height:1.7em;" colspan="2"> <!--<div class="prompt_New blankMessage_New"><b>Enter the value.</b></div>
+                                <div class="prompt_New whatvalue"><b>What <span id="whatValue"></span>?</b></div>
+                                <div class="remark"><span class="incorrect">Incorrect!</span><span class="correct">Correct!</span></div>
+                				<div class="prompt_New WhatPrompt prompt1"><div class="promptText"><b>Place Comma ( , ) appropriately.</b></div></div>-->
+        </td>
+        <td class="InptDnTd2"> <div class="inputDiv"> <input type="text" class="input1 input" id="inputText" style="text-transform:lowercase;" spellcheck="false" tabindex="1" onKeyPress="keyPressed(event)" onFocus="myFocus(this)" autocomplete="off"/> </div> </td>
+        <td class="InptDnTd3"> <b class="pre">pounds</b> </td>
+        <td class="InptDnTd4"> <div class="doneDiv"> <button class="done1" onClick="doneButton()" tabindex="2">Done</button> </div> </td>
+        </tr>
+
+        <tr>
+        <td class="InptDnTd1" style="height:1.7em;" colspan="2"></td>
+        <td class="InptDnTd2" style="height:2em;" colspan="3"> <div class="prompt_New blankMessage_New"><b>Enter the value.</b></div>
+                                <div class="prompt_New whatvalue"><b>What <span id="whatValue"></span>?</b></div>
+                        <div class="remark no-space" style="width:70%;"><div class="respond bold" style="color:#339966;"><span id="FB_TxtBox"></span></div></div>
+                				<div class="prompt_New WhatPrompt prompt1"><div class="promptText"><b>Place Comma ( , ) appropriately.</b></div></div>
+        </td>
+        </tr>
+        </table>
+        </div>
+    
+    </div><!-- AreaForKeypadAndInputInDevice -->
+
+<div class="solutionContainer solutionMain">
+	<div class="SolutionRemark"><div class="solutionText"><i>Solution</i>:</div>
+     <!--<div class="steps"> <div class="StpBtnCmn step1">Step 1</div> <div class="StpBtnCmn step2">Step 2</div> </div>-->
+    </div>
+    
+ <div class="solutionMainSteps">
+		<div class="Step1_div middle">
+            <div class="Step11">
+            <table class="SolTable1" style="white-space:nowrap;">
+            
+            
+            
+            <tr>
+            <td class="tl" style="padding-top:0em;">
+                Total weight
+                <strong>
+                &nbsp;= &nbsp;
+                
+                <span class="brc1">(</span>
+                <div class="fraction">
+                <span class="fup"><span class="val1"></span></span>
+                <span class="bar">/</span>
+                <span class="fdn"><span class="val2"></span></span>
+                </div></strong> &nbsp;<strong>+</strong>&nbsp;
+               
+                <strong>
+                <div class="fraction">
+                <span class="fup"><span class="val3"></span></span>
+                <span class="bar">/</span>
+                <span class="fdn"><span class="val4"></span></span>
+                </div></strong> &nbsp;<strong>+</strong>&nbsp;
+                
+                <strong>
+                <div class="fraction">
+                <span class="fup"><span class="val5"></span></span>
+                <span class="bar">/</span>
+                <span class="fdn"><span class="val6"></span></span>
+                </div></strong> &nbsp;<strong>+</strong>&nbsp;  
+                
+                <strong>
+                <div class="fraction">
+                <span class="fup"><span class="val7"></span></span>
+                <span class="bar">/</span>
+                <span class="fdn"><span class="val8"></span></span>
+                </div> <span class="brc1">)</span></strong> pounds
+                
+            </td>
+            </tr>
+            
+            
+            <tr>
+            <td class="tl" style="padding-top:0.5em">
+             <span style="visibility:hidden">Total weight</span>
+             <strong>
+             &nbsp;= &nbsp;
+             </strong>
+                <strong><span class="brc1">(</span></strong>
+                <div class="fraction bold">
+                <span class="fup"><span class="val1t"></span> + <span class="val2t"></span> + <span class="val3t"></span> + <span class="val4t"></span></span>
+                <span class="bar">/</span>
+                <span class="fdn"><span class="asr_1"></span></span>
+                </div>
+                <strong><span class="brc1">)</span></strong>
+            </td>
+            </tr>  
+            
+            
+            
+            <tr>
+           <td class="tl" style="padding-top:0.5em">
+             <span style="visibility:hidden">Total weight</span>
+             <strong>
+             &nbsp;= &nbsp;
+             </strong>
+             
+                <div class="fraction bold blue">
+                <span class="fup"><span class="asr_2"></span></span>
+                <span class="bar">/</span>
+                <span class="fdn"><span class="asr_1"></span></span>
+                </div> pounds
+                
+                <strong>
+             &nbsp; = &nbsp;
+             <span class="asr_3 red"></span>
+             </strong> <span class="ar_1"></span>
+            </td>
+            </tr>  
+  
+            
+            
+            
+                  
+            </table>
+            </div>
+
+		</div><!-- Step1_div end -->
+  
+     
+</div><!-- solutionMainSteps end --> 
+
+    
+    </div>	<!-- solutionContainer closed-->
+</div>	<!-- container closed-->
+
+<div class="footer">
+
+<table class="FooterTable">
+        <tr>
+          <td class="FtrTab_Td1" width="10%"><img src="image/print.png" class="print"/> </td>
+          <td class="FtrTab_Td2" width="10%"><img src="image/AutoRun.png" class="autorun"/></td>
+  <td class="FtrTab_Td3" width="50%"><!--<div class="SpaceBarDiv"><button class="SpaceBarButton spacebar" onClick="spacebarClickFunction()">Click or Press Spacebar to Continue</button></div>--></td>
+          <td class="FtrTab_Td4" width="30%"><div class="Copyright">Copyright © 2005 – 2019 <span class="ForDeviceCopy">Educo Int. Inc.</span></div></td>
+        </tr>
+</table>
+
+</div>	<!-- footer closed-->
+
+</div>		<!-- container-fluid closed-->
+</body>
+</html>
