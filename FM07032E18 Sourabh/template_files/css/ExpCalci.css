@@ -1,0 +1,378 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header
+{
+	min-height:50px;
+	position:relative;
+} 
+
+.vb{
+	vertical-align:bottom;
+}
+
+.commaBtn{
+	position:absolute;
+	left:40%;
+	top:-25%;
+}
+
+ .RootBtn1
+{
+    width: 100%;
+    height: 100%;
+	margin-left:3%;
+	margin-top:0px;
+}
+.newTabBtn{
+	vertical-align:bottom;
+}
+@media (min-width: 1101px) and (max-width: 1400px) 	
+{	
+
+	.RootInfo 
+	{ 
+		top: 3%;   
+	}
+	.spec_char
+	{
+		font-size:14px;	
+	}
+.commaBtn{
+	font-size:18px;
+}
+
+ .vb,.TCB
+	{
+		height:26px;
+	}
+	
+	.newTabBtn{
+	margin-top: 8px;
+	margin-left: 2%;
+	height:24px;
+	width:22%;
+}
+
+.newSqrtBtn{
+	height:24px;
+}
+.KeypadBoundary {
+    width: 98%;
+}
+}
+ 
+	
+	
+@media (min-width: 1401px) and (max-width: 1550px)
+{
+	.dropdownSquareRoot 
+	{
+		margin-top: 2% !important;
+	}
+	
+	.vb,.TCB
+	{
+		height:28px;
+	}
+	.spec_char
+	{
+		font-size:18px;
+	}
+	.commaBtn{
+	font-size:22px;
+}
+.newTabBtn{
+	margin-top: 8px;
+	margin-left: 2%;
+	height:28px;
+	width:22%;
+}
+.newSqrtBtn{
+	height:28px;
+}
+
+.KeypadBoundary {
+    width: 98%;
+}
+}
+@media (min-width: 1551px) and (max-width: 1700px) 
+{
+	.dropdownSquareRoot
+	{
+		margin-top: 1% !important;
+	
+	}
+	.ArrowUpDsk
+	{
+		position: absolute;
+		width: 4.3% !important;
+	}
+	
+	.vb,.TCB
+	{
+		height:30px;
+	}
+	.spec_char
+	{
+		font-size:18px;
+	}
+	.commaBtn{
+	font-size:22px;
+}
+.newTabBtn{
+	margin-top: 8px;
+	margin-left: 2%;
+	height:30px;
+	width:22%;
+}
+.newSqrtBtn{
+	height:29px;
+}
+
+ .KeypadBoundary {
+    width: 98%;
+}
+}	
+@media (min-width: 1701px) and (max-width: 1850px)
+{
+	.dropdownSquareRoot
+	{
+		margin-top: 1% !important;
+		vertical-align:bottom;
+	}
+	.ArrowUpDsk
+	{
+		position: absolute;
+		width: 4.3% !important;
+	}
+	
+	.vb,.TCB
+	{
+		height:30px;
+	}
+	.spec_char
+	{
+		font-size:18px;
+	}
+	.commaBtn{
+	font-size:22px;
+}
+.newTabBtn{
+	margin-top: 8px;
+	margin-left: 2%;
+	height:30px;
+	width:22%;
+}
+.newSqrtBtn{
+	height:30px;
+}
+
+.KeypadBoundary {
+    width: 98%;
+}
+}
+@media (min-width: 1851px) and (max-width: 2000px)
+{
+	.dropdownSquareRoot
+	{
+		margin-top: 1% !important;
+		vertical-align:bottom;
+	}
+	.ArrowUpDsk
+	{
+		position: absolute;
+		width: 3.8% !important;
+	}  
+	.vb,.TCB
+	{
+		height:32px;
+	}
+	.spec_char
+	{
+		font-size:20px;
+	}
+		.commaBtn{
+	font-size:24px;
+}
+.newTabBtn{
+	margin-top: 8px;
+	margin-left: 2%;
+	height:32px;
+	width:22%;
+}
+.newSqrtBtn{
+	height:32px;
+}
+
+.KeypadBoundary {
+    width: 98%;
+}
+}
+@media (min-width: 2001px)
+{
+	
+	.dropdownSquareRoot
+	{
+		margin-top: 1% !important;
+		vertical-align:bottom;
+	}
+	.vb,.TCB
+	{
+		height:34px;
+	}
+	.spec_char
+	{
+		font-size:22px;
+	}	
+	.commaBtn{
+	font-size:28px;
+}
+.newTabBtn{
+	margin-top: 8px;
+	margin-left: 2%;
+	height:34px;
+	width:22%;
+}
+.newSqrtBtn{
+	height:34px;
+}
+
+.KeypadBoundary {
+    width: 98%;
+}
+}
+
+
+
+/*/////////////////////////////////////////////////////////*/
+.section4
+{
+    width: 29%;
+}	
+.new_h
+{
+    width: 69% ;
+}
+.new_calc_btn
+{
+    margin-left: 2%;
+	width:10.5%;
+}
+/*.SolutionRemark
+{
+    position: absolute;
+    bottom: 0%;
+    left: 2%;
+	background:none;
+	width:auto;
+}
+
+*/.newSqrtBtn{
+	width:20%;
+	margin-left:2%;
+	vertical-align:bottom;
+}
+.ClickToAnsDiv{                                          
+	z-index:10;
+}
+.TCB
+{
+	margin-left: 3%;
+    width: 18%;
+}
+.newClearBtn
+{
+	margin-left:28%;
+}
+.newDelBtn
+{
+	margin-left:3%;
+}
+
+.newbackBtn
+{
+	margin-left:3%;
+}
+
+
+/*/////////////////////////////*/
+
+
+.ArrowUpDsk
+{
+	z-index:1;
+    position: absolute;
+    width: 5%;
+    top: 93%;
+	left:13%;
+}
+.RootInfo
+{
+	background:white;
+	z-index:5;
+    position: absolute;
+    right: 3.5%;
+    top: 3.6%;
+}
+.dropdownSquareRoot
+{
+    margin-left: 2%;
+}
+/*/////////////////////////////////////////////////////////*/
+
+
+/*//////////////////////FOR ROOT///////////////////////////*/
+.mainRootDiv
+{
+    position:relative;
+    display:inline-block;
+}		
+.Rootline1
+{
+    height:85%;	
+    position:absolute;
+    border-right:1.5px solid ;
+    left:0%;
+    transform-origin:bottom right;
+    transform:rotate(10deg);
+}		
+.Rootline2
+{
+    height:40%;	
+    position:absolute;
+    border-right:1.5px solid ;
+    left:0%;
+    bottom:15%;
+    transform-origin:bottom right;
+    transform:rotate(-30deg);
+}		
+.Rootline3
+{
+    height:40%;	
+    position:absolute;
+    border-right:1.5px solid ;
+    bottom:100%;
+    transform-origin:bottom right;
+    transform:rotate(-90deg);
+}
+.Rootline4 
+{
+    height: 40%;
+    position: absolute;
+    border-left: 15px solid white;
+    top: 16%;
+    right: 0;
+    transform-origin: top right;
+    transform: rotate(90deg);
+    z-index: 37;
+}
+.contentDiv
+{
+    display:inline-block;	
+}
+.RootBorderTop
+{
+    border-top:2px solid ;
+}
+/*/////////////////////////////////////////////////////////*/
