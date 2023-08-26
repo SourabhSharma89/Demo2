@@ -127,6 +127,7 @@ $(document).ready(function(){
 														});
 						 
 						 $(".newSet").click(function(){ 
+						 alert("insidenew")
 													 
 									$(".autorun").css('disable','true');				 
 									$(".Procedure_banner").hide();				   
